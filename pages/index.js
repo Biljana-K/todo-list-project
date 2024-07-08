@@ -7,7 +7,7 @@ import TodoList from "../components/todos/TodoList";
 import AddTodo from "../components/todos/AddTodo";
 
 import Card from "../components/layout/Card";
-import classes from "../components/layout/Card.module.css";
+
 
 const MainPage = (props) => {
   const [todos, setTodos] = useState([
