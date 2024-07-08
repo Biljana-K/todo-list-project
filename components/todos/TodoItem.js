@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import CircleButton from "../images/CircleIcon";
+import { DoneButton } from "../images/CircleIcon";
 import { DeleteIcon, EditIcon } from "../images/TodoListIcons";
 
 import classes from "./TodoItem.module.css";
@@ -87,7 +88,8 @@ const TodoItem = ({ item, todos, setTodos }) => {
               className={classes["todo_items_left"]}
               onClick={completeTodoTask}
             >
-              <CircleButton style={{ fill: "transparent" }} />
+              {!item.is_completed && <CircleButton /> }
+              {item.is_completed && <DoneButton /> }
               <p
                 style={
                   item.is_completed ? { textDecoration: "line-through" } : {}
